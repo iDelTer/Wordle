@@ -1,14 +1,26 @@
 {
     "3": [
-        "mar", "sol", "luz"
+        "mar", "sol", "luz", "ver", "ser", "pez", "gel", "bar", "zar", "ojo", "hez", "mes", "dia", "año", "uva", "bao", "uña", "bol", "gol"
     ],
     "4": [
-        "agua", "vida", "casa", "vaso"
+        "agua", "vida", "casa", "vaso", "mano", "mono", "mona", "gota", "feto", "frio", "peto", "meta", "mota", "buho", "buzo", "pata", "pala", "bala", "bata", "bola", "mozo", "moza", "caja", "gafa", "foto", "moto", "ogro", "otro", "boca", "humo", "pelo", "gato", "mesa", "coto", "polo", "baya", "mago", "gato", "raiz", "lupa", "azul", "rosa", "pavo", "mole", "palo", "pato"
     ],
     "5": [
-        "manta", "raton", "tarta", "flujo"
+        "manta", "raton", "tarta", "flujo", "balon", "maton", "boton", "bulto", "pieza", "bolso", "bolsa", "potro", "burro", "curro", "carro", "brazo", "oreja", "madre", "padre", "motor", "silla", "gorro", "techo", "suelo", "movil", "barba", "perla", "vello", "bello", "bella", "perro", "zorro", "arbol", "morro", "boton", "bollo", "valla", "pulmon", "hacer", "plato", "harto", "cable", "marte", "venus", "urano", "pollo", "grano", "plano", "lunes", "mundo", "negro", "jamon", "torre", "señor", "torta", "acido", "nacer", "vale"
     ],
     "6": [
-        "cabeza", "puerta"
+        "cabeza", "puerta", "camion", "balcon", "monton", "basura", "camisa", "pierna", "cuello", "pijama", "cadena", "conejo", "pepino", "patuco", "guante", "lengua", "mierda", "musica", "girafa", "diente", "patron", "planta", "sonido", "verter", "tierra", "jupiter", "pluton", "arroyo", "charla", "martes", "jueves", "sabado", "gusano", "blanco", "morado", "marron", "perdon", "vomito"
+    ],
+    "7": [
+        "chaqueta", "botella", "cerilla", "cartera", "tarjeta", "hermano", "hermana", "pizarra", "capucha", "paquete", "ballena", "ardilla", "tiburon", "polvora", "pulsera", "asiento", "reflejo", "moflete", "corazon", "vientre", "palabra", "vertigo", "mendigo", "liquido", "saturno", "neptuno", "cogollo", "viernes", "domingo", "agujero", "planeta", "amarillo", "anillo"
+    ],
+    "8": [
+        "pantalla", "pantalon", "camiseta", "pañuelo", "extintor", "telefono", "plastico", "calcetin", "sudadera", "metralla", "estomago", "mercurio", "miercoles"
+    ],
+    "9": [
+        "carretera", "pendiente"
+    ],
+    "10": [
+        "parlamento"
     ]
 }
