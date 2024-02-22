@@ -67,6 +67,7 @@ function handleKeys(e, info, gameMatrix){
 function cellManager(info, gameMatrix){
     let charsWord = info.word.toLowerCase().split("");
     let charsUser = []
+    console.log(charsWord)
     let wordUser = ""
     // Get writen by player
     for(let i = 0; i < gameMatrix.length; i++){
@@ -74,11 +75,86 @@ function cellManager(info, gameMatrix){
         charsUser.push(char)
         wordUser += char
     }
+    console.log(charsUser)
     if(wordUser == info.word){
-        alert(`Has ganado en el intento ${info.line + 1}`)
         for(let i = 0; i < gameMatrix.length; i++){
             document.getElementById(`line-${info.line}-cell-${i}`).classList.add('correct')
         }
+        alert(`Has ganado en el intento ${info.line + 1}`)
+    } else{
+        for(let i = 0; i < gameMatrix.length; i++){
+            if(!charsWord.includes(charsUser[i])){
+                document.getElementById(`line-${info.line}-cell-${i}`).classList.add('wrong')
+                charsUser[i] = null
+            }
+            for(let i = 0; i < gameMatrix.length; i++){
+                if(charsWord[i] == charsUser[i]){
+                    document.getElementById(`line-${info.line}-cell-${i}`).classList.add('correct')
+                    charsWord[i] = null
+                    charsUser[i] = null
+                }
+            }
+        }
+        let terminar = false
+        let contador = 0
+        console.log(charsWord)
+        console.log(charsUser)
+        while(!terminar){
+            if(!fullNull(charsUser)){
+                if(charsUser[contador] != null){
+                    if(charsWord.includes(charsUser[contador])){
+                        document.getElementById(`line-${info.line}-cell-${contador}`).classList.add('position')
+                        let indice = charsWord.indexOf(charsUser[contador])
+                        charsWord[indice] = null
+                        charsUser[contador] = null
+                    } else{
+                        terminar = true
+                    }
+                }
+            } else{
+                terminar = true
+            }
+            contador++;
+            contador = contador > (gameMatrix.length - 1) ? 0 : contador;
+        }
+        info.line++;
+        info.letter = 0;
+        if(info.line >= info.word.length){
+            matchLost(info);
+        }
+    }
+    
+}
+
+function fullNull(matrix){
+    let maxCount = matrix.length
+    let count = 0
+
+    for(let i = 0; i < maxCount; i++){
+        if(matrix[i] == null){
+            count++
+        }
+    }
+    return count == maxCount
+}
+
+/*function cellManager(info, gameMatrix){
+    let charsWord = info.word.toLowerCase().split("");
+    let charsUser = []
+    console.log(charsWord)
+    let wordUser = ""
+    // Get writen by player
+    for(let i = 0; i < gameMatrix.length; i++){
+        const char = document.getElementById(`line-${info.line}-cell-${i}`).innerText.toLowerCase()
+        charsUser.push(char)
+        wordUser += char
+    }
+    console.log(charsUser)
+    if(wordUser == info.word){
+        for(let i = 0; i < gameMatrix.length; i++){
+            document.getElementById(`line-${info.line}-cell-${i}`).classList.add('correct')
+        }
+        alert(`Has ganado en el intento ${info.line + 1}`)
     } else{
         for(let i = 0; i < gameMatrix.length; i++){
             if(!charsWord.includes(charsUser[i])){
@@ -86,11 +162,23 @@ function cellManager(info, gameMatrix){
                 charsWord[i] = null
                 charsUser[i] = null
             }
-            // Put green the corrects one
-            if(charsWord[i] == charsUser[i]){
-                document.getElementById(`line-${info.line}-cell-${i}`).classList.add('correct')
-                charsWord[i] = null
+        }
+        for(let i = 0; i < gameMatrix.length; i++){
+            if(charsWord[i] != null){
+                if(charsWord[i] == charsUser[i]){
+                    document.getElementById(`line-${info.line}-cell-${i}`).classList.add('correct')
+                    charsWord[i] = null
+                    charsUser[i] = null
+                }
+            }
+        }
+        console.log(charsWord)
+        console.log(charsUser)
+        for(let i = 0; i < gameMatrix.length; i++){
+            if(charsUser[i] != null){
+                charsWord[indexOf(charsUser[i])] = null
                 charsUser[i] = null
+                document.getElementById(`line-${info.line}-cell-${i}`).classList.add('position')
             }
         }
         for(let i = 0; i < gameMatrix.length; i++){
@@ -105,7 +193,7 @@ function cellManager(info, gameMatrix){
         }
     }
     
-}
+}*/
 
 function containsLetterOtherPosition(letter, position, info, charsWord){
     let contains = -1
