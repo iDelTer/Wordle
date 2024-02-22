@@ -1,7 +1,10 @@
 window.addEventListener("load", async () => {
     const words = await fetch('./public/words.json', {headers: {'Content-Type': 'application/json'}}).then(response => response.json())
-    let gameMatrix = Array(4).fill(null).map(x => Array(4).fill(null))
-    let info = {line: 0, letter: 0, word: words[4][Math.floor(Math.random() * words[4].length)]}
+    let wordLength = 5
+    let tries = 4
+    //let gameMatrix = Array(4).fill(null).map(x => Array(4).fill(null))
+    let gameMatrix = Array(wordLength).fill(null).map(x => Array(tries).fill(null))
+    let info = {line: 0, letter: 0, word: words[wordLength][Math.floor(Math.random() * words[wordLength].length)]}
     console.log(info.word)
 
     window.addEventListener("keydown", (e) => {
@@ -41,7 +44,7 @@ function handleKeys(e, info, gameMatrix){
                 cell.classList.remove("filled")
             }
         } else if(e.key == "Enter"){
-            cellManager(info,gameMatrix)
+            cellManager(info, gameMatrix)
         } else{
             if(info.letter <= gameMatrix.length - 1){
                 cell.innerText = e.key
@@ -62,9 +65,10 @@ function handleKeys(e, info, gameMatrix){
 }
 
 function cellManager(info, gameMatrix){
-    const charsWord = info.word.toLowerCase().split("");
+    let charsWord = info.word.toLowerCase().split("");
     let charsUser = []
     let wordUser = ""
+    // Get writen by player
     for(let i = 0; i < gameMatrix.length; i++){
         const char = document.getElementById(`line-${info.line}-cell-${i}`).innerText.toLowerCase()
         charsUser.push(char)
@@ -77,31 +81,36 @@ function cellManager(info, gameMatrix){
         }
     } else{
         for(let i = 0; i < gameMatrix.length; i++){
+            if(!charsWord.includes(charsUser[i])){
+                document.getElementById(`line-${info.line}-cell-${i}`).classList.add('wrong')
+                charsWord[i] = null
+                charsUser[i] = null
+            }
+            // Put green the corrects one
             if(charsWord[i] == charsUser[i]){
                 document.getElementById(`line-${info.line}-cell-${i}`).classList.add('correct')
-                console.log(charsWord[i] + " es igual a " + charsUser[i] + "  -  " + i)
-            } else if(containsLetterOtherPosition(charsUser[i], i, info, charsWord) >= 0){
+                charsWord[i] = null
+                charsUser[i] = null
+            }
+        }
+        for(let i = 0; i < gameMatrix.length; i++){
+            if(charsUser[i] != null){
                 document.getElementById(`line-${info.line}-cell-${i}`).classList.add('position')
-                console.log(charsUser[i] + " está en otra posición " + "  -  " + i)
-            } else{
-                document.getElementById(`line-${info.line}-cell-${i}`).classList.add('wrong')
-                console.log("mal" + "  -  " + i)
             }
         }
         info.line++;
         info.letter = 0;
         if(info.line >= info.word.length){
-            matchLost();
+            matchLost(info);
         }
     }
+    
 }
 
 function containsLetterOtherPosition(letter, position, info, charsWord){
     let contains = -1
     for(let i = 0; i < info.word.length && contains < 0; i++){
         if(charsWord[i] == letter){
-            //contains = i
-            console.log("Contiene en: " + i)
             contains = i
         }
         console.log(charsWord[i] + " - " + position)
@@ -109,6 +118,6 @@ function containsLetterOtherPosition(letter, position, info, charsWord){
     return contains
 }
 
-function matchLost(){
-    alert("Has perdido la partida :C")
+function matchLost(info){
+    alert("Has perdido 😭. La palabra era " + info.word)
 }
