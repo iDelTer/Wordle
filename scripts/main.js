@@ -1,7 +1,7 @@
 window.addEventListener("load", async () => {
     const words = await fetch('./public/words.json', {headers: {'Content-Type': 'application/json'}}).then(response => response.json())
-    let wordLength = 5
-    let tries = 4
+    let wordLength = 6
+    let tries = 5
     //let gameMatrix = Array(4).fill(null).map(x => Array(4).fill(null))
     let gameMatrix = Array(wordLength).fill(null).map(x => Array(tries).fill(null))
     let info = {line: 0, letter: 0, word: words[wordLength][Math.floor(Math.random() * words[wordLength].length)]}
@@ -21,7 +21,7 @@ window.addEventListener("load", async () => {
 function drawBoard(gameMatrix){
     const gameBoard = document.getElementById("game")
     let text = ``
-    for(let i = 0; i < gameMatrix.length; i++){
+    for(let i = 0; i < gameMatrix[0].length; i++){
         text += `<div id='line-${i}' class='row'>`
         for(let j = 0; j < gameMatrix.length; j++){
             text += `<div id='line-${i}-cell-${j}' class='cell'></div>`
@@ -32,13 +32,13 @@ function drawBoard(gameMatrix){
 }
 
 function handleKeys(e, info, gameMatrix){
-    let unnaccepted = ["F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "F11", "F12", " ", "Tab", "Alt", "Control", "Shift", "CapsLock", "AltGraph", "Meta", "ContextMenu", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ",", ".", "-", ";", ":", "_", "`", "+", "´", "ç", "^", "*", "¨", "Ç", "[", "]", "{", "}", "ç", "Ç"]
+    let unnaccepted = ["F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "F11", "F12", " ", "Tab", "Alt", "Control", "Shift", "CapsLock", "AltGraph", "Meta", "ContextMenu", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ",", ".", "-", ";", ":", "_", "`", "+", "´", "ç", "^", "*", "¨", "Ç", "[", "]", "{", "}", "ç", "Ç", "Delete", "Insert", "End", "PageUp", "PageDown", "Home", "ScrollLock", "Pause", "º"]
     if(!unnaccepted.includes(e.key)){
         let cell = document.getElementById(`line-${info.line}-cell-${info.letter}`)
         if(e.key == "Backspace"){
+            info.letter = info.letter - 1 < 0 ? 0 : info.letter - 1
             cell = document.getElementById(`line-${info.line}-cell-${info.letter}`)
             cell.innerText = ""
-            info.letter = info.letter - 1 < 0 ? 0 : info.letter - 1
             let classes = cell.classList
             if(classes.value.includes("filled")){
                 cell.classList.remove("filled")
@@ -119,7 +119,7 @@ function cellManager(info, gameMatrix){
         }
         info.line++;
         info.letter = 0;
-        if(info.line >= info.word.length){
+        if(info.line >= tries){
             matchLost(info);
         }
     }
