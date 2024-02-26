@@ -1,26 +1,38 @@
 {
     "3": [
-        "mar", "sol", "luz", "ver", "ser", "pez", "gel", "bar", "zar", "ojo", "hez", "mes", "dia", "año", "uva", "bao", "uña", "bol", "gol"
+        "mar", "sol", "luz", "ver", "ser", "pez", "gel", "bar", "zar", "ojo", "hez", "mes", "dia", "año", "uva", "bao", "uña", "bol", "gol", "zoo", "vez", "oso", "ley", "vil", "col", "voz", "hoz", "gas"
     ],
     "4": [
-        "agua", "vida", "casa", "vaso", "mano", "mono", "mona", "gota", "feto", "frio", "peto", "meta", "mota", "buho", "buzo", "pata", "pala", "bala", "bata", "bola", "mozo", "moza", "caja", "gafa", "foto", "moto", "ogro", "otro", "boca", "humo", "pelo", "gato", "mesa", "coto", "polo", "baya", "mago", "gato", "raiz", "lupa", "azul", "rosa", "pavo", "mole", "palo", "pato"
+        "agua", "vida", "casa", "vaso", "mano", "mono", "mona", "gota", "feto", "frio", "peto", "meta", "mota", "buho", "buzo", "pata", "pala", "bala", "bata", "bola", "mozo", "moza", "caja", "gafa", "foto", "moto", "ogro", "otro", "boca", "humo", "pelo", "gato", "mesa", "coto", "polo", "baya", "mago", "raiz", "lupa", "azul", "rosa", "pavo", "mole", "palo", "pato", "vale", "poco", "moco", "foco", "pomo", "tren", "olor", "dedo", "pesa", "peso", "amor", "rabo", "rato", "rama", "roma", "beso", "beta", "voto", "reno", "mayo", "peca", "vela", "teta", "bebe", "culo", "timo", "ropa", "bolo", "odio", "luna", "rezo", "cruz", "misa", "maza", "mozo", "soso", "area", "rayo", "capo", "huir", "nube", "coma", "pito", "sexo", "suma", "hoja"
     ],
     "5": [
-        "manta", "raton", "tarta", "flujo", "balon", "maton", "boton", "bulto", "pieza", "bolso", "bolsa", "potro", "burro", "curro", "carro", "brazo", "oreja", "madre", "padre", "motor", "silla", "gorro", "techo", "suelo", "movil", "barba", "perla", "vello", "bello", "bella", "perro", "zorro", "arbol", "morro", "boton", "bollo", "valla", "pulmon", "hacer", "plato", "harto", "cable", "marte", "venus", "urano", "pollo", "grano", "plano", "lunes", "mundo", "negro", "jamon", "torre", "señor", "torta", "acido", "nacer", "vale"
+        "manta", "raton", "tarta", "flujo", "balon", "maton", "boton", "bulto", "pieza", "bolso", "bolsa", "potro", "burro", "curro", "carro", "brazo", "oreja", "madre", "padre", "motor", "silla", "gorro", "techo", "suelo", "movil", "barba", "perla", "vello", "bello", "bella", "perro", "zorro", "arbol", "morro", "bollo", "valla", "hacer", "plato", "harto", "cable", "marte", "venus", "urano", "pollo", "grano", "plano", "lunes", "mundo", "negro", "jamon", "torre", "señor", "torta", "acido", "nacer", "polea", "parte", "polvo", "gordo", "libro", "litro", "metro", "coche", "cerdo", "oveja", "cetro", "color", "polea", "mareo", "paseo", "dolor", "fecha", "lento", "veloz", "cebra", "parto", "padro", "piano", "mente", "leche", "lecho", "pecho", "queso", "punto", "corto", "angel", "vuelo", "reino", "enero", "marzo", "abril", "junio", "julio", "cerca", "lejos", "novia", "novio", "mujer", "rubio", "valor", "volar", "velar", "besar", "beber", "jugar", "grasa", "hecho", "tonto", "presa", "honor", "atomo", "tumba", "clero", "calor", "grado", "clavo", "calvo", "calva", "marca", "dulce", "radio", "rodar", "ralla", "larva", "poema", "vulto", "bulto", "mucho", "tecla", "reir", "risa", "rollo", "bruto", "debil", "viud", "carta", "sello", "resta", "anden", "arder", "comic"
     ],
     "6": [
-        "cabeza", "puerta", "camion", "balcon", "monton", "basura", "camisa", "pierna", "cuello", "pijama", "cadena", "conejo", "pepino", "patuco", "guante", "lengua", "mierda", "musica", "girafa", "diente", "patron", "planta", "sonido", "verter", "tierra", "jupiter", "pluton", "arroyo", "charla", "martes", "jueves", "sabado", "gusano", "blanco", "morado", "marron", "perdon", "vomito"
+        "cabeza", "puerta", "camion", "balcon", "monton", "basura", "camisa", "pierna", "cuello", "pijama", "cadena", "conejo", "pepino", "patuco", "guante", "lengua", "mierda", "musica", "girafa", "diente", "patron", "planta", "sonido", "verter", "tierra", "jupiter", "pluton", "arroyo", "charla", "martes", "jueves", "sabado", "gusano", "blanco", "morado", "marron", "perdon", "vomito", "pulmon", "poesia", "viento", "lluvia", "tiempo", "tierno", "templo", "piedra", "cordon", "pienso", "maleza", "maldad", "bondad", "neutro", "acecho", "hileso", "pasaje", "agosto", "marido", "hombre", "previo", "matriz", "gemido", "guerra", "belico", "texto", "gracia", "pereza", "precio", "fuente", "pecado", "cometa", "muerte", "muerto", "martir", "cereza", "amargo", "habito", "rallar", "mancha", "hambre", "comida", "bebida", "regalo", "locura", "visita", "virtud", "moneda", "pajaro", "pagina", "madera", "morado", "dibujo"
     ],
     "7": [
-        "chaqueta", "botella", "cerilla", "cartera", "tarjeta", "hermano", "hermana", "pizarra", "capucha", "paquete", "ballena", "ardilla", "tiburon", "polvora", "pulsera", "asiento", "reflejo", "moflete", "corazon", "vientre", "palabra", "vertigo", "mendigo", "liquido", "saturno", "neptuno", "cogollo", "viernes", "domingo", "agujero", "planeta", "amarillo", "anillo"
+        "chaqueta", "botella", "cerilla", "cartera", "tarjeta", "hermano", "hermana", "pizarra", "capucha", "paquete", "ballena", "ardilla", "tiburon", "polvora", "pulsera", "asiento", "reflejo", "moflete", "corazon", "vientre", "palabra", "vertigo", "mendigo", "liquido", "saturno", "neptuno", "cogollo", "viernes", "domingo", "agujero", "planeta", "amarillo", "anillo", "mentira", "rosario", "iglesia", "cemento", "arreglo", "cerveza", "neutral", "malicia", "castigo", "vastago", "demonio", "febrero", "octubre", "trasero", "vestido", "alegria", "cilindro", "circulo", "empezar", "racismo", "vagueza", "lealtad", "galaxia", "materia", "manzana", "maldito", "habitat", "secreto", "escapar", "mutilar", "anuncio", "numero", "flotar", "pequeño", "volumen", "ejemplo", "mechero", "cigarro", "enfermo", "aceptar", "saxofon", "espacio", "dividir", "mochila", "consola", "teclado", "moraton", "herida"
     ],
     "8": [
-        "pantalla", "pantalon", "camiseta", "pañuelo", "extintor", "telefono", "plastico", "calcetin", "sudadera", "metralla", "estomago", "mercurio", "miercoles"
+        "pantalla", "pantalon", "camiseta", "pañuelo", "extintor", "telefono", "plastico", "calcetin", "sudadera", "metralla", "estomago", "mercurio", "miercoles", "mutacion", "glosario", "vehiculo", "tormenta", "pimiento", "cimiento", "rotacion", "votacion", "alegoria", "cuadrado", "piramide", "escribir", "lentitud", "satelite", "nebulosa", "presagia", "cilantro", "oximoron", "hambruna", "sorpresa", "flotante", "mecanico", "mecanica", "destreza", "division", "monedero"
     ],
     "9": [
-        "carretera", "pendiente"
+        "carretera", "pendiente", "manicomio", "explicacion", "vitalidad", "direccion", "velocidad", "serpiente", "esqueleto", "ceremonia", "noviembre", "diciembre", "posterior", "triangulo", "violencia", "alabanza", "igualdad", "ordenador", "hermandad", "sororidad", "sabiduria", "fortaleza", "debilidad", "cocodrilo", "boligrafo"
     ],
     "10": [
-        "parlamento"
+        "parlamento", "cementerio", "septiembre", "excelencia", "excentrico", "mutilacion", "enfermedad"
+    ],
+    "11": [
+        "pensamiento", "mandamiento", "temperatura", "volatilidad", "magulladura"
+    ],
+    "12": [
+        "benevolencia", "notificacion"
+    ],
+    "13": [
+        "configuracion"
+    ],
+    "14": [
+        "vulnerabilidad", "congratulacion", "circunferencia", "multiplicacion"
     ]
 }
